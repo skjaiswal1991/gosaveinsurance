@@ -8,54 +8,34 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
-			<span class="sticky-post"><?php _e( 'Featured', 'twentysixteen' ); ?></span>
-		<?php endif; ?>
+<?php 
+$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' ); ?>
 
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-	</header><!-- .entry-header -->
 
-	<?php twentysixteen_excerpt(); ?>
 
-	<?php twentysixteen_post_thumbnail(); ?>
 
-	<div class="entry-content">
-		<?php
-			/* translators: %s: Name of current post */
-			the_content(
-				sprintf(
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ),
-					get_the_title()
-				)
-			);
-
-			wp_link_pages(
-				array(
-					'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentysixteen' ) . '</span>',
-					'after'       => '</div>',
-					'link_before' => '<span>',
-					'link_after'  => '</span>',
-					'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>%',
-					'separator'   => '<span class="screen-reader-text">, </span>',
-				)
-			);
-			?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php twentysixteen_entry_meta(); ?>
-		<?php
-			edit_post_link(
-				sprintf(
-					/* translators: %s: Name of current post */
-					__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ),
-					get_the_title()
-				),
-				'<span class="edit-link">',
-				'</span>'
-			);
-			?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+		<div>
+			<div style=" overflow: hidden;"></div>
+			<div id="297588089306813881-gallery" class="imageGallery" style="line-height: 0px; padding: 0; margin: 0">
+				<div id="297588089306813881-imageContainer0" style="float:left;width:33.28%;margin:0;">
+					<div id="297588089306813881-insideImageContainer0" style="position:relative;margin:10px;">
+						<div class="galleryImageBorder" style="border-width:1px;padding:6px;">
+							<div class="galleryImageHolder" style="position:relative; width:100%; padding:0 0 75%;overflow:hidden;">
+								<div class="galleryInnerImageHolder">
+									<a href="<?php echo esc_url( get_permalink() );?>" title="Auto Insurance Quote"><img src="<?php echo $url;?>" class="galleryImage" _width="400" _height="266" alt="Auto Insurance Quote" style="position:absolute;border:0;width:112.78%;top:0%;left:-6.39%">
+										<div class="galleryCaptionHolder partialImageGalleryCaption" style="">
+											<div class="galleryCaptionHolderInnerBg"></div>
+											<div class="galleryCaptionHolderInner galleryCaptionsVisible">
+												<div class="galleryCaptionInnerTextHolder">
+													<div class="galleryCaptionInnerText"><?php the_title();?></div>
+												</div>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>

@@ -18,18 +18,70 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<div id="main-wrap">
+    <div id="wsite-content" class="wsite-elements wsite-not-footer">
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
+			<!-- <header class="page-header">
 				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
+					//the_archive_title( '<h1 class="page-title">', '</h1>' );
+					//the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
-			</header><!-- .page-header -->
+			</header>.page-header -->
 
+			<?php
+			$category = get_queried_object();			
+			$meta_image = get_wp_term_image($category->term_id)?>
+			<div class="wsite-section-wrap">
+            <div class="wsite-section wsite-body-section wsite-section-bg-image wsite-background-11" style="vertical-align: middle;background-image: url('<?php echo $meta_image;?>') ;background-repeat: no-repeat ;background-position: 0.00% 57.28% ;background-size: 100% ;background-color: transparent ;background-size: cover;">
+                <div class="wsite-section-content">
+                    <div class="container">
+                        <div class="wsite-section-elements">
+                            <div class="wsite-spacer" style="height:37px;"></div>
+
+                            <h2 class="wsite-content-title" style="text-align:center;"><strong><font color="#ffffff"><font size="7">Insurance Quotes</font></font><br></strong></h2>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="wsite-section-wrap">
+            <div class="wsite-section wsite-body-section wsite-background-12">
+                <div class="wsite-section-content">
+                    <div class="container">
+                        <div class="wsite-section-elements">
+                            <div>
+                                <div class="wsite-multicol">
+                                    <div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+                                        <table class="wsite-multicol-table">
+                                            <tbody class="wsite-multicol-tbody">
+                                                <tr class="wsite-multicol-tr">
+                                                    <td class="wsite-multicol-col" style="width:82.076308784383%; padding:0 15px;">
+
+                                                        <h2 class="wsite-content-title" style="text-align:center;"><font size="6">What type of insurance quote would you like?</font></h2>
+
+                                                    </td>
+                                                    <td class="wsite-multicol-col" style="width:17.923691215617%; padding:0 15px;">
+
+                                                        <div style="text-align:center;">
+                                                            <div style="height: 0px; overflow: hidden;"></div>
+                                                            <a class="wsite-button wsite-button-small wsite-button-highlight" href="/contact.html">
+                                                                <span class="wsite-button-inner">Contact Us</span>
+                                                            </a>
+                                                            <div style="height: 0px; overflow: hidden;"></div>
+                                                        </div>
+
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+			
 			<?php
 			// Start the Loop.
 			while ( have_posts() ) :
@@ -60,9 +112,12 @@ get_header(); ?>
 
 		endif;
 		?>
+		</div> <span style="display: block; clear: both; height: 0px; overflow: hidden;"></span>
+		
+		</div><div style="height: 20px; overflow: hidden;"></div></div></div></div>	
 
-		</main><!-- .site-main -->
+		</div><!-- .site-main -->
 	</div><!-- .content-area -->
 
-<?php get_sidebar(); ?>
+<?php //get_sidebar(); ?>
 <?php get_footer(); ?>

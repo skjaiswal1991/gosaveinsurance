@@ -198,7 +198,7 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
 														echo '<div class="wsite-menu-wrap" style="display:none"><ul class="wsite-menu">';
 														foreach($data_menu[$fchild['ID']]['children'] as $schild ){?>												
 																		<li id="wsite-nav-249895384185995531" class="wsite-menu-subitem-wrap ">
-																			<a href="/auto-insurance-quote.html" class="wsite-menu-subitem"><span class="wsite-menu-title"><?php echo $schild['title'];?></span></a>
+																			<a href="<?php echo $schild['url'];?>" class="wsite-menu-subitem"><span class="wsite-menu-title"><?php echo $schild['title'];?></span></a>
 																		</li>
 
 													<?php	}
