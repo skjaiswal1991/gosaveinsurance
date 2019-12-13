@@ -37,11 +37,11 @@ get_header(); ?>
                                                 <tr class="wsite-multicol-tr">
                                                     <td class="wsite-multicol-col" style="width:74.736842105263%; padding:0 15px;">
                                                         <h2 class="wsite-content-title" style="text-align:left;">
-															<font size="6"><?php the_field('banner_title');?> </font>
+															<font size="6">Complete the details below to get your free car insurance quote<?php //the_field('banner_title');?> </font>
 														</h2>
                                                     </td>
-                                                    <td class="wsite-multicol-col" style="width:25.263157894737%; padding:0 15px;">
-                                                    <?php while(have_rows('button')): the_row(); ?>
+                                                    
+                                                    <?php /* while(have_rows('button')): the_row(); ?>
                                                         <div style="text-align:center;">
                                                             <div style="height: 0px; overflow: hidden;"></div>
                                                             <a class="wsite-button wsite-button-small wsite-button-highlight" href="/contact.html">
@@ -49,16 +49,25 @@ get_header(); ?>
                                                             </a>
                                                             <div style="height: 10px; overflow: hidden;"></div>
                                                         </div>
-													<?php endwhile; ?>
+													<?php endwhile; */ ?>
 
-                                                        <!-- <div style="text-align:center;">
+                                                    <td class="wsite-multicol-col" style="width:25.263157894737%; padding:0 15px;">
+                                                        <div style="text-align:center;">
                                                             <div style="height: 0px; overflow: hidden;"></div>
-                                                            <a class="wsite-button wsite-button-small wsite-button-highlight" href="/other-quotes.html">
+                                                            <a class="wsite-button wsite-button-small wsite-button-highlight" href="/contact.html">
+                                                                <span class="wsite-button-inner">Contact Us</span>
+                                                            </a>
+                                                            <div style="height: 10px; overflow: hidden;"></div>
+                                                        </div>
+													    <div style="text-align:center;">
+                                                            <div style="height: 0px; overflow: hidden;"></div>
+                                                            <a class="wsite-button wsite-button-small wsite-button-highlight" href="/contact.html">
                                                                 <span class="wsite-button-inner">Quick Quote</span>
                                                             </a>
                                                             <div style="height: 10px; overflow: hidden;"></div>
-                                                        </div> -->
-                                                    </td>
+                                                        </div>
+	                                                </td>
+                                                    
                                                 </tr>
                                             </tbody>
                                         </table>

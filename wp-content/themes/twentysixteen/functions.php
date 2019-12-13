@@ -841,3 +841,25 @@ function custom_post_type() {
 		}
 		return $menu;
 	}
+
+	add_shortcode('Business_Insurance_Quote','Business_Insurance_Quote_callback');
+	add_shortcode('Business_Owners_Package','Business_Owners_Package_callback');
+	add_shortcode('Group_Benefits_Insurance_Quote','Group_Benefits_Insurance_Quote_callback');
+	add_shortcode('Insurance_Bond_Quote','Insurance_Bond_Quote_callback');
+
+	function Business_Insurance_Quote_callback(){
+		get_template_part( 'template-parts/services-template/Business_Insurance_Quote', 'page' );
+	}
+
+	function Business_Owners_Package_callback(){
+		get_template_part( 'template-parts/services-template/Business_Owners_Package', 'page' );
+	}
+	function Group_Benefits_Insurance_Quote_callback(){
+		get_template_part( 'template-parts/services-template/Group_Benefits_Insurance_Quote', 'page' );
+	}
+	function Insurance_Bond_Quote_callback(){
+		get_template_part( 'template-parts/services-template/Insurance_Bond_Quote', 'page' );
+	}
+
+
+	
